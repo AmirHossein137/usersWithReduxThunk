@@ -18,16 +18,16 @@ const Navbar = () => {
   }, [search]);
 
   return (
-    <div className="flex items-center justify-between py-3 border-b border-gray-200 mb-7">
+    <div className="flex flex-col gap-3 items-center justify-between py-3 border-b border-gray-200 my-7 md:flex-row">
       <div className="flex items-center gap-4">
         <Link to={"/"}>Create</Link>
         <Link to={"/users"}>All Users ({user?.length})</Link>
       </div>
-      <div>
+      <div className="w-full md:w-auto">
         <input
           type="text"
           placeholder="Search..."
-          className="border w-[550px] h-12 shadow-md indent-2 rounded-lg outline-none"
+          className="border w-full md:w-[500px] h-12 shadow-md indent-2 rounded-lg outline-none"
           value={search}
           onChange={(e) => setSearch(e.target.value)}
         />
