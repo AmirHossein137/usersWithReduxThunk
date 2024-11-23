@@ -8,9 +8,7 @@ import Loader from "../components/Loader";
 
 const Users = () => {
   const dispatch = useDispatch();
-  const { users, loading, status, searchText } = useSelector(
-    (state) => state.user
-  );
+  const { users, loading, status, searchText } = useSelector((state) => state.user);
   useEffect(() => {
     dispatch(showUsers());
   }, [status, dispatch]);
